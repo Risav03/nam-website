@@ -32,7 +32,7 @@ export default function CTA() {
     >
       {/* Background glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-2xl pointer-events-none"
         style={{
           background:
             "radial-gradient(circle, rgba(1,210,67,0.12) 0%, rgba(1,210,67,0.03) 40%, transparent 70%)",
@@ -53,14 +53,14 @@ export default function CTA() {
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#"
-            className="group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-full hover:brightness-110 transition-all duration-200 text-center overflow-hidden flex items-center justify-center gap-2 glow-green"
+            className="group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-2xl hover:brightness-110 transition-all duration-200 text-center overflow-hidden flex items-center justify-center gap-2 glow-green"
           >
             <Apple className="w-5 h-5" />
             Download for iOS
           </a>
           <a
             href="#"
-            className="px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-full hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center flex items-center justify-center gap-2"
+            className="px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-2xl hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center flex items-center justify-center gap-2"
           >
             <Smartphone className="w-5 h-5" />
             Download for Android

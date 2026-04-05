@@ -220,7 +220,7 @@ export default function Hero() {
       {/* Radial gradient overlays */}
       <div className="absolute inset-0 pointer-events-none z-[1]">
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-2xl"
           style={{
             background:
               "radial-gradient(circle, rgba(1,210,67,0.08) 0%, transparent 60%)",
@@ -248,8 +248,8 @@ export default function Hero() {
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
           {/* Badge */}
           <div className="hero-badge mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-nam-green tracking-wide uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-nam-green animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-2xl glass text-xs font-medium text-nam-green tracking-wide uppercase">
+              <span className="w-1.5 h-1.5 rounded-2xl bg-nam-green animate-pulse" />
               Live on iOS &amp; Android
             </span>
           </div>
@@ -277,7 +277,7 @@ export default function Hero() {
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4">
             <a
               href="#"
-              className="hero-cta group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-full hover:brightness-110 transition-all duration-200 text-center overflow-hidden"
+              className="hero-cta group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-2xl hover:brightness-110 transition-all duration-200 text-center overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Download for iOS
@@ -299,7 +299,7 @@ export default function Hero() {
             </a>
             <a
               href="#"
-              className="hero-cta px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-full hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center"
+              className="hero-cta px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-2xl hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center"
             >
               Download for Android
             </a>

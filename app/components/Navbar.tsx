@@ -97,7 +97,7 @@ export default function Navbar() {
             <a
               href="#download"
               onClick={(e) => handleLinkClick(e, "#download")}
-              className="text-sm font-semibold bg-nam-green text-black px-5 py-2.5 rounded-full hover:brightness-110 transition-all duration-200"
+              className="text-sm font-semibold bg-nam-green text-black px-5 py-2.5 rounded-2xl hover:brightness-110 transition-all duration-200"
             >
               Download App
             </a>
@@ -130,7 +130,7 @@ export default function Navbar() {
           <a
             href="#download"
             onClick={(e) => handleLinkClick(e, "#download")}
-            className="text-lg font-semibold bg-nam-green text-black px-8 py-3 rounded-full hover:brightness-110 transition-all"
+            className="text-lg font-semibold bg-nam-green text-black px-8 py-3 rounded-2xl hover:brightness-110 transition-all"
           >
             Download App
           </a>

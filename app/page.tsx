@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-20 max-lg:pt-32">
+      <main className="pt-10 max-lg:pt-28">
         <Hero />
         <HowItWorks />
         <Mining />

@@ -158,7 +158,7 @@ export default function HowItWorks() {
     >
       {/* Background accent */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-2xl pointer-events-none"
         style={{
           background:
             "radial-gradient(circle, rgba(1,210,67,0.04) 0%, transparent 60%)",
@@ -184,8 +184,8 @@ export default function HowItWorks() {
         >
           {/* Progress bar (desktop only) — sits above columns */}
           <div className="hidden md:block absolute -top-8 left-[16.666%] right-[16.666%] z-0">
-            <div className="h-[2px] rounded-full bg-white/5 overflow-hidden">
-              <div className="hw-progress-fill h-full bg-nam-green/50 w-full rounded-full" />
+            <div className="h-[2px] rounded-2xl bg-white/5 overflow-hidden">
+              <div className="hw-progress-fill h-full bg-nam-green/50 w-full rounded-2xl" />
             </div>
           </div>
 
@@ -197,7 +197,7 @@ export default function HowItWorks() {
               className="hw-col relative flex flex-col items-center text-center px-4 md:px-8"
             >
               {/* Step number badge */}
-              <div className="hw-number w-10 h-10 rounded-full bg-nam-green/10 border border-nam-green/20 flex items-center justify-center mb-5">
+              <div className="hw-number w-10 h-10 rounded-2xl bg-nam-green/10 border border-nam-green/20 flex items-center justify-center mb-5">
                 <span className="text-xs font-mono font-bold text-nam-green">
                   {step.number}
                 </span>
@@ -227,8 +227,8 @@ export default function HowItWorks() {
               </p>
 
               {/* Detail chip */}
-              <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-nam-green/5 border border-nam-green/10">
-                <div className="w-1 h-1 rounded-full bg-nam-green" />
+              <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-nam-green/5 border border-nam-green/10">
+                <div className="w-1 h-1 rounded-2xl bg-nam-green" />
                 <span className="text-[11px] text-nam-green/70 font-medium">
                   {step.detail}
                 </span>

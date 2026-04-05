@@ -109,9 +109,9 @@ export default function Tokenomics() {
                       </span>
                     </div>
                   </div>
-                  <div className="w-full h-3 rounded-full bg-white/5 overflow-hidden">
+                  <div className="w-full h-3 rounded-2xl bg-white/5 overflow-hidden">
                     <div
-                      className="dist-bar-fill h-full rounded-full"
+                      className="dist-bar-fill h-full rounded-2xl"
                       style={{
                         width: `${item.percent}%`,
                         background: item.color,
