@@ -329,8 +329,8 @@ export default function Hero() {
           <Image
             src="/assets/product_demo.png"
             alt="NAM Rewards app showing wallet and earnings dashboard"
-            width={800}
-            height={800}
+            width={1200}
+            height={1200}
             className="w-full h-auto drop-shadow-[0_0_60px_rgba(1,210,67,0.15)]"
             priority
           />
