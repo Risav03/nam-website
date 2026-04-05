@@ -25,6 +25,23 @@ export const metadata: Metadata = {
     "NAM Coin",
     "decentralized finance",
   ],
+  icons: {
+    icon: "/assets/icon.svg",
+    apple: "/assets/icon.png",
+  },
+  openGraph: {
+    title: "NAM Rewards — Mine Crypto From Your Receipts",
+    description:
+      "Upload receipts, earn NAM Coins on-chain, and get a powerful expense dashboard. Risk-free crypto rewards for everyday purchases.",
+    images: [{ url: "/assets/icon_with_text.png" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "NAM Rewards — Mine Crypto From Your Receipts",
+    description:
+      "Upload receipts, earn NAM Coins on-chain, and get a powerful expense dashboard. Risk-free crypto rewards for everyday purchases.",
+    images: ["/assets/icon_with_text.png"],
+  },
 };
 
 export default function RootLayout({
