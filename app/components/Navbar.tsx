@@ -10,9 +10,11 @@ import { Menu, X } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const navLinks = [
-  { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Mining", href: "#mining" },
+  { label: "Features", href: "#features" },
   { label: "Tokenomics", href: "#tokenomics" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -66,7 +68,7 @@ export default function Navbar() {
     <>
       <nav
         ref={navRef}
-        className="fixed top-0 left-0 right-0 z-50 glass border-b border-nam-border"
+        className="fixed top-0 left-0 right-0 z-50 glass border-b border-nam-border rounded-2xl mx-auto mt-4 w-[calc(100%-5rem)] md:w-[calc(100%-30rem)]"
       >
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3">
@@ -75,7 +77,7 @@ export default function Navbar() {
               alt="NAM Rewards"
               width={32}
               height={32}
-              className="w-8 h-8"
+              className="w-8 h-8 rounded-lg"
             />
             <span className="text-lg font-bold tracking-tight">NAM</span>
           </a>
@@ -93,11 +95,11 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#waitlist"
-              onClick={(e) => handleLinkClick(e, "#waitlist")}
+              href="#download"
+              onClick={(e) => handleLinkClick(e, "#download")}
               className="text-sm font-semibold bg-nam-green text-black px-5 py-2.5 rounded-full hover:brightness-110 transition-all duration-200"
             >
-              Join Waitlist
+              Download App
             </a>
           </div>
 
@@ -126,11 +128,11 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#waitlist"
-            onClick={(e) => handleLinkClick(e, "#waitlist")}
+            href="#download"
+            onClick={(e) => handleLinkClick(e, "#download")}
             className="text-lg font-semibold bg-nam-green text-black px-8 py-3 rounded-full hover:brightness-110 transition-all"
           >
-            Join Waitlist
+            Download App
           </a>
         </div>
       )}

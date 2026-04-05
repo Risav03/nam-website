@@ -131,97 +131,79 @@ export default function Hero() {
         delay: 0.2,
       });
 
-      tl.from(".hero-badge", {
-        y: 20,
-        opacity: 0,
-        duration: 0.6,
-      })
-        .from(
-          ".hero-icon",
-          {
-            scale: 0,
-            rotation: -360,
-            opacity: 0,
-            duration: 1.2,
-            ease: "back.out(1.5)",
-          },
-          "-=0.3"
-        )
-        .from(
+      tl.fromTo(".hero-badge",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6 }
+      )
+        .fromTo(
           ".hero-headline-line",
+          { y: 80, opacity: 0 },
           {
-            y: 80,
-            opacity: 0,
+            y: 0,
+            opacity: 1,
             duration: 0.9,
             stagger: 0.12,
           },
-          "-=0.6"
+          "-=0.3"
         )
-        .from(
+        .fromTo(
           ".hero-sub",
-          {
-            y: 30,
-            opacity: 0,
-            duration: 0.7,
-          },
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.7 },
           "-=0.4"
         )
-        .from(
+        .fromTo(
           ".hero-cta",
+          { y: 20, opacity: 0 },
           {
-            y: 20,
-            opacity: 0,
+            y: 0,
+            opacity: 1,
             duration: 0.6,
             stagger: 0.1,
           },
           "-=0.3"
         )
-        .from(
+        .fromTo(
           ".hero-stats > div",
+          { y: 20, opacity: 0 },
           {
-            y: 20,
-            opacity: 0,
+            y: 0,
+            opacity: 1,
             duration: 0.5,
             stagger: 0.08,
           },
           "-=0.2"
         )
-        .from(
-          ".hero-scroll",
+        .fromTo(
+          ".hero-image",
+          { x: 60, opacity: 0 },
           {
-            opacity: 0,
-            duration: 0.6,
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
           },
+          "-=0.8"
+        )
+        .fromTo(
+          ".hero-scroll",
+          { opacity: 0 },
+          { opacity: 1, duration: 0.6 },
           "-=0.1"
         );
 
-      // Continuous floating on icon
-      gsap.to(".hero-icon", {
-        y: -12,
-        duration: 2.5,
+      // Subtle floating on product image
+      gsap.to(".hero-image", {
+        y: -10,
+        duration: 3,
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
         delay: 1.5,
       });
-
-      // Pulsing glow ring
-      gsap.to(".hero-glow-ring", {
-        scale: 1.15,
-        opacity: 0.4,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
     },
     { scope: sectionRef }
   );
-
-  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
@@ -261,111 +243,100 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-5xl">
-        {/* Badge */}
-        <div className="hero-badge mb-8">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-nam-green tracking-wide uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-nam-green animate-pulse" />
-            Now Building — Join Early
-          </span>
-        </div>
+      <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-center gap-12 lg:gap-16 max-w-7xl w-full mx-auto">
+        {/* Left: Text */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+          {/* Badge */}
+          <div className="hero-badge mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-nam-green tracking-wide uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-nam-green animate-pulse" />
+              Live on iOS &amp; Android
+            </span>
+          </div>
 
-        {/* Icon with glow ring */}
-        <div className="hero-icon relative mb-10">
-          <div className="hero-glow-ring absolute inset-[-16px] rounded-full border border-nam-green/20" />
-          <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-2xl glass flex items-center justify-center">
-            <Image
-              src="/assets/icon.svg"
-              alt="NAM Pickaxe"
-              width={56}
-              height={56}
-              className="w-12 h-12 md:w-14 md:h-14 drop-shadow-[0_0_20px_rgba(1,210,67,0.5)]"
-              priority
-            />
+          {/* Headline */}
+          <h1 className="overflow-hidden">
+            <span className="hero-headline-line block text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold leading-[1.05] tracking-tight">
+              Mine Crypto From
+            </span>
+            <span className="hero-headline-line block text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold leading-[1.05] tracking-tight text-gradient-green">
+              Your Receipts
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="hero-sub mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-foreground/50 max-w-2xl leading-relaxed">
+            Upload everyday receipts. Earn{" "}
+            <span className="text-nam-green font-medium">NAM Coins</span>{" "}
+            through on-chain mining. Get a powerful expense dashboard.
+            <br className="hidden sm:block" />
+            Zero risk. Zero investment. Real crypto.
+          </p>
+
+          {/* CTAs */}
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4">
+            <a
+              href="#"
+              className="hero-cta group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-full hover:brightness-110 transition-all duration-200 text-center overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Download for iOS
+                <svg
+                  className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            </a>
+            <a
+              href="#"
+              className="hero-cta px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-full hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center"
+            >
+              Download for Android
+            </a>
+          </div>
+
+          {/* Stats strip */}
+          <div className="hero-stats mt-14 md:mt-16 flex flex-wrap items-center justify-center lg:justify-start gap-8 md:gap-12">
+            {[
+              { value: "On-Chain", label: "Mining" },
+              { value: "Zero", label: "Investment" },
+              { value: "Real-Time", label: "Insights" },
+            ].map((stat) => (
+              <div key={stat.label} className="flex flex-col items-center lg:items-start">
+                <span className="text-lg md:text-xl font-bold text-nam-green font-mono">
+                  {stat.value}
+                </span>
+                <span className="text-xs text-foreground/30 uppercase tracking-wider mt-0.5">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Headline */}
-        <h1 className="overflow-hidden">
-          <span className="hero-headline-line block text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight">
-            Mine Crypto From
-          </span>
-          <span className="hero-headline-line block text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-gradient-green">
-            Your Receipts
-          </span>
-        </h1>
-
-        {/* Subheadline */}
-        <p className="hero-sub mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-foreground/50 max-w-2xl leading-relaxed">
-          Upload everyday receipts. Earn{" "}
-          <span className="text-nam-green font-medium">NAM Coins</span>{" "}
-          through on-chain mining. Get a powerful expense dashboard.
-          <br className="hidden sm:block" />
-          Zero risk. Zero investment. Real crypto.
-        </p>
-
-        {/* CTAs */}
-        <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4">
-          <a
-            href="#waitlist"
-            onClick={(e) => scrollTo(e, "#waitlist")}
-            className="hero-cta group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-full hover:brightness-110 transition-all duration-200 text-center overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center justify-center gap-2">
-              Join the Waitlist
-              <svg
-                className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </span>
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </a>
-          <a
-            href="#features"
-            onClick={(e) => scrollTo(e, "#features")}
-            className="hero-cta px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-full hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center"
-          >
-            Learn More
-          </a>
-        </div>
-
-        {/* Stats strip */}
-        <div className="hero-stats mt-14 md:mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          {[
-            { value: "On-Chain", label: "Mining" },
-            { value: "Zero", label: "Investment" },
-            { value: "Real-Time", label: "Insights" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center">
-              <span className="text-lg md:text-xl font-bold text-nam-green font-mono">
-                {stat.value}
-              </span>
-              <span className="text-xs text-foreground/30 uppercase tracking-wider mt-0.5">
-                {stat.label}
-              </span>
-            </div>
-          ))}
+        {/* Right: Product demo image */}
+        <div className="hero-image flex-shrink-0 w-full max-w-sm lg:max-w-md xl:max-w-lg">
+          <Image
+            src="/assets/product_demo.png"
+            alt="NAM Rewards app showing wallet and earnings dashboard"
+            width={800}
+            height={800}
+            className="w-full h-auto drop-shadow-[0_0_60px_rgba(1,210,67,0.15)]"
+            priority
+          />
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="hero-scroll absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-        <span className="text-[10px] uppercase tracking-[0.2em] text-foreground/25 font-medium">
-          Scroll
-        </span>
-        <div className="w-5 h-8 rounded-full border border-foreground/15 flex items-start justify-center p-1.5">
-          <div className="w-1 h-1.5 rounded-full bg-nam-green animate-bounce" />
-        </div>
-      </div>
     </section>
   );
 }

@@ -4,26 +4,12 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import {
-  Store,
-  CreditCard,
-  Handshake,
-  BarChart3,
-} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const distribution = [
-  { label: "Users", percent: 60, color: "#01D243" },
-  { label: "Treasury", percent: 25, color: "#01D24380" },
-  { label: "Businesses", percent: 15, color: "#01D24340" },
-];
-
-const roadmap = [
-  { icon: Store, title: "POS Software", description: "Point-of-sale integrations for local businesses" },
-  { icon: CreditCard, title: "Crypto Payments", description: "Pay with NAM Coins at participating merchants" },
-  { icon: Handshake, title: "Brand Partnerships", description: "Affiliate rewards and brand deals" },
-  { icon: BarChart3, title: "Prediction Markets", description: "Predict daily receipt uploads, product prices, and spending trends — powered by real receipt data" },
+  { label: "Users", percent: 50, amount: "7.2M", color: "#01D243" },
+  { label: "Treasury", percent: 50, amount: "7.2M", color: "#01D24380" },
 ];
 
 export default function Tokenomics() {
@@ -70,18 +56,14 @@ export default function Tokenomics() {
         }
       });
 
-      gsap.fromTo(
-        ".roadmap-card",
-        { y: 50, opacity: 0 },
-        {
-          scrollTrigger: { trigger: ".roadmap-grid", start: "top 80%" },
-          y: 0,
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power3.out",
-        }
-      );
+      gsap.from(".token-stat-card", {
+        scrollTrigger: { trigger: ".token-stats", start: "top 80%" },
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power3.out",
+      });
     },
     { scope: sectionRef }
   );
@@ -100,8 +82,8 @@ export default function Tokenomics() {
             <span className="text-gradient-green">Tokenomics</span>
           </h2>
           <p className="mt-4 text-foreground/50 text-base md:text-lg max-w-2xl mx-auto">
-            An inflation model similar to Dogecoin — fixed initial supply with
-            yearly issuance. Transparent, on-chain, and community-driven.
+            14.4 million total tokens. Transparent, on-chain, and
+            community-driven distribution.
           </p>
         </div>
 
@@ -116,11 +98,16 @@ export default function Tokenomics() {
                     <span className="text-sm font-medium text-foreground/70">
                       {item.label}
                     </span>
-                    <span
-                      className={`dist-percent-${i} text-sm font-mono font-semibold text-nam-green`}
-                    >
-                      0%
-                    </span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs font-mono text-foreground/40">
+                        {item.amount}
+                      </span>
+                      <span
+                        className={`dist-percent-${i} text-sm font-mono font-semibold text-nam-green`}
+                      >
+                        0%
+                      </span>
+                    </div>
                   </div>
                   <div className="w-full h-3 rounded-full bg-white/5 overflow-hidden">
                     <div
@@ -145,24 +132,26 @@ export default function Tokenomics() {
             </div>
           </div>
 
-          {/* Roadmap */}
+          {/* Token Stats */}
           <div>
-            <h3 className="text-xl font-semibold mb-8">What&apos;s Coming</h3>
-            <div className="roadmap-grid grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {roadmap.map((item) => (
-                <div
-                  key={item.title}
-                  className="roadmap-card glass rounded-xl p-5 hover:bg-white/[0.06] transition-all duration-300 group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-nam-green/10 flex items-center justify-center mb-3 group-hover:bg-nam-green/20 transition-colors">
-                    <item.icon className="w-5 h-5 text-nam-green" />
-                  </div>
-                  <h4 className="text-sm font-semibold mb-1">{item.title}</h4>
-                  <p className="text-xs text-foreground/40 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+            <h3 className="text-xl font-semibold mb-8">Key Figures</h3>
+            <div className="token-stats grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="token-stat-card glass rounded-xl p-5">
+                <p className="text-2xl font-bold font-mono text-nam-green">14.4M</p>
+                <p className="text-xs text-foreground/40 mt-1">Total Supply</p>
+              </div>
+              <div className="token-stat-card glass rounded-xl p-5">
+                <p className="text-2xl font-bold font-mono text-nam-green">7.2M</p>
+                <p className="text-xs text-foreground/40 mt-1">Allocated to Users</p>
+              </div>
+              <div className="token-stat-card glass rounded-xl p-5">
+                <p className="text-2xl font-bold font-mono text-nam-green">7.2M</p>
+                <p className="text-xs text-foreground/40 mt-1">Allocated to Treasury</p>
+              </div>
+              <div className="token-stat-card glass rounded-xl p-5">
+                <p className="text-2xl font-bold font-mono text-nam-green">50/50</p>
+                <p className="text-xs text-foreground/40 mt-1">User / Treasury Split</p>
+              </div>
             </div>
           </div>
         </div>

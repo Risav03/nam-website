@@ -4,10 +4,12 @@ import Image from "next/image";
 import { Globe, MessageCircle, Send } from "lucide-react";
 
 const footerLinks = [
-  { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Mining", href: "#mining" },
+  { label: "Features", href: "#features" },
   { label: "Tokenomics", href: "#tokenomics" },
-  { label: "Waitlist", href: "#waitlist" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Download", href: "#download" },
 ];
 
 const socials = [
