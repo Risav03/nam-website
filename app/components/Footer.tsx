@@ -85,6 +85,12 @@ export default function Footer() {
           <p className="text-xs text-foreground/30">
             &copy; {new Date().getFullYear()} NAM Rewards. All rights reserved.
           </p>
+          <a
+            href="https://www.nam.xyz/terms"
+            className="text-xs text-foreground/30 hover:text-nam-green transition-colors"
+          >
+            Terms of Use
+          </a>
           <p className="text-xs text-foreground/20">
             NAM Coins are Non-Automated Mined tokens.
           </p>
