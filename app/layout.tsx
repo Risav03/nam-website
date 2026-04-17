@@ -16,12 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "NAM Rewards — Mine Crypto From Your Receipts",
   description:
-    "Upload receipts, earn NAM Coins on-chain, and get a powerful expense dashboard. Risk-free crypto rewards for everyday purchases.",
+    "Upload receipts, earn NAM Coins on-chain, and get a powerful crypto wallet. NAM Rewards combine crypto rewards with a true crypto wallet. Buy, sell, send, and earn tokens — all from the convenience of one app.",
   keywords: [
     "NAM Rewards",
     "crypto rewards",
     "receipt mining",
-    "expense tracker",
     "NAM Coin",
     "decentralized finance",
   ],
@@ -32,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NAM Rewards — Mine Crypto From Your Receipts",
     description:
-      "Upload receipts, earn NAM Coins on-chain, and get a powerful expense dashboard. Risk-free crypto rewards for everyday purchases.",
+      "Upload receipts, earn NAM Coins on-chain, and get a powerful crypto wallet. NAM Rewards combine crypto rewards with a true crypto wallet. Buy, sell, send, and earn tokens — all from the convenience of one app.",
     images: [{ url: "/assets/icon_with_text.png" }],
   },
   twitter: {
     card: "summary",
     title: "NAM Rewards — Mine Crypto From Your Receipts",
     description:
-      "Upload receipts, earn NAM Coins on-chain, and get a powerful expense dashboard. Risk-free crypto rewards for everyday purchases.",
+      "Upload receipts, earn NAM Coins on-chain, and get a powerful crypto wallet. NAM Rewards combine crypto rewards with a true crypto wallet. Buy, sell, send, and earn tokens — all from the convenience of one app.",
     images: ["/assets/icon_with_text.png"],
   },
 };

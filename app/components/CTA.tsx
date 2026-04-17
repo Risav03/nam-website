@@ -52,14 +52,14 @@ export default function CTA() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/nam-rewards/id6757811340"
             className="group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-2xl hover:brightness-110 transition-all duration-200 text-center overflow-hidden flex items-center justify-center gap-2 glow-green"
           >
             <Apple className="w-5 h-5" />
             Download for iOS
           </a>
           <a
-            href="#"
+            href="https://play.google.com/store/apps/details?id=xyz.nam.namrewards"
             className="px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-2xl hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center flex items-center justify-center gap-2"
           >
             <Smartphone className="w-5 h-5" />

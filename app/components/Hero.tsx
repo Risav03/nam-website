@@ -268,7 +268,9 @@ export default function Hero() {
           <p className="hero-sub mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-foreground/50 max-w-2xl leading-relaxed">
             Upload everyday receipts. Earn{" "}
             <span className="text-nam-green font-medium">NAM Coins</span>{" "}
-            through on-chain mining. Get a powerful expense dashboard.
+            through on-chain mining. Get a powerful crypto wallet.
+            NAM Rewards combine crypto rewards with a true crypto wallet. Buy, sell, send, and earn
+            tokens — all from the convenience of one app.
             <br className="hidden sm:block" />
             Zero risk. Zero investment. Real crypto.
           </p>
@@ -276,7 +278,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4">
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/nam-rewards/id6757811340"
               className="hero-cta group relative px-8 py-3.5 bg-nam-green text-black font-semibold rounded-2xl hover:brightness-110 transition-all duration-200 text-center overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
@@ -298,7 +300,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=xyz.nam.namrewards"
               className="hero-cta px-8 py-3.5 border border-nam-border text-foreground/70 font-medium rounded-2xl hover:border-nam-green/30 hover:text-foreground hover:bg-nam-green/5 transition-all duration-200 text-center"
             >
               Download for Android

@@ -6,11 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import {
   Pickaxe,
-  LayoutDashboard,
-  Lightbulb,
   ShieldCheck,
   Link2,
-  RotateCcw,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -23,18 +20,6 @@ const features = [
       "Scan receipts from everyday purchases and earn NAM Coins on-chain. Zero investment required.",
   },
   {
-    icon: LayoutDashboard,
-    title: "Expense Dashboard",
-    description:
-      "Categorized spending insights, monthly summaries, and budget tracking — all in one place.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Smart Insights",
-    description:
-      "Merchant breakdowns, financial recommendations, and spending patterns to help you save.",
-  },
-  {
     icon: ShieldCheck,
     title: "Risk-Free Onboarding",
     description:
@@ -45,12 +30,6 @@ const features = [
     title: "On-Chain Mining",
     description:
       "Real decentralized finance powered by verified real-world spending data.",
-  },
-  {
-    icon: RotateCcw,
-    title: "Habit-Forming Loop",
-    description:
-      "Upload → Earn → Insights → Repeat. A retention loop that builds long-term engagement.",
   },
 ];
 

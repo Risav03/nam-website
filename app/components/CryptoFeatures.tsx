@@ -11,9 +11,6 @@ import {
   ArrowLeftRight,
   Wallet,
   ShieldCheck,
-  PieChart,
-  TrendingUp,
-  RotateCcw,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -42,24 +39,6 @@ const features = [
     title: "Send to Any Wallet",
     description:
       "Send NAM Coins or other tokens to any Base wallet address. Full self-custody — you own and control your tokens.",
-  },
-  {
-    icon: PieChart,
-    title: "Expense Dashboard",
-    description:
-      "Receipts transform into a full personal finance dashboard. Categorized spending, monthly summaries, merchant breakdowns, and budget tracking.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Smart Financial Insights",
-    description:
-      "Get financial recommendations and spending pattern analysis. The app is valuable even on days you don't upload receipts.",
-  },
-  {
-    icon: RotateCcw,
-    title: "Habit-Forming Loop",
-    description:
-      "Upload receipts → earn crypto → unlock insights → insights motivate more uploads. A retention loop that builds long-term engagement.",
   },
   {
     icon: ShieldCheck,
@@ -110,8 +89,17 @@ export default function CryptoFeatures() {
     <section
       id="features"
       ref={sectionRef}
-      className="relative py-24 md:py-32 px-6"
+      className="relative py-24 md:py-32 px-6 overflow-hidden"
     >
+      {/* Background accent */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-2xl pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(1,210,67,0.04) 0%, transparent 60%)",
+        }}
+      />
+
       <div className="mx-auto max-w-7xl">
         <div className="cf-title text-center mb-16 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
@@ -119,9 +107,8 @@ export default function CryptoFeatures() {
             <span className="text-gradient-green">Mining</span>
           </h2>
           <p className="mt-4 text-foreground/50 text-base md:text-lg max-w-2xl mx-auto">
-            NAM Rewards combines crypto rewards with a full personal finance
-            dashboard. Buy, sell, send, and manage tokens — plus get spending
-            insights from every receipt.
+            NAM Rewards combine crypto rewards with a true crypto wallet. Buy,
+            sell, send, and earn tokens — all from the convenience of one app.
           </p>
         </div>
 

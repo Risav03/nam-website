@@ -108,8 +108,17 @@ export default function Mining() {
     <section
       id="mining"
       ref={sectionRef}
-      className="relative py-24 md:py-32 px-6"
+      className="relative py-24 md:py-32 px-6 overflow-hidden"
     >
+      {/* Background accent */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-2xl pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(1,210,67,0.04) 0%, transparent 60%)",
+        }}
+      />
+
       <div className="mx-auto max-w-7xl">
         {/* Title */}
         <div className="mining-title text-center mb-16 md:mb-20">

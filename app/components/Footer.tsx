@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Globe, MessageCircle, Send } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const footerLinks = [
   { label: "How It Works", href: "#how-it-works" },
@@ -13,9 +13,7 @@ const footerLinks = [
 ];
 
 const socials = [
-  { icon: Globe, label: "X / Twitter", href: "#" },
-  { icon: MessageCircle, label: "Discord", href: "#" },
-  { icon: Send, label: "Telegram", href: "#" },
+  { icon: Mail, label: "Email Support", href: "mailto:support@nam.xyz" },
 ];
 
 export default function Footer() {
@@ -32,9 +30,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-nam-border py-12 md:py-16 px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 w-full">
           {/* Logo + tagline */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 w-1/4">
             <a href="#" className="flex items-center gap-3">
               <Image
                 src="/assets/icon.svg"
@@ -54,7 +52,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-6 w-1/2 justify-center">
             {footerLinks.map((link) => (
               <a
                 key={link.label}
@@ -68,7 +66,7 @@ export default function Footer() {
           </div>
 
           {/* Socials */}
-          <div className="flex gap-3">
+          <div className="flex gap-3 w-1/4 justify-end">
             {socials.map((social) => (
               <a
                 key={social.label}

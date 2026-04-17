@@ -12,12 +12,12 @@ const faqs = [
   {
     question: "What is NAM Rewards?",
     answer:
-      "NAM Rewards is an app that lets you earn cryptocurrency (NAM Coins) just by uploading photos of your everyday receipts. You spend money like normal — on groceries, coffee, gas, online shopping — then snap your receipt and earn crypto. It also gives you an expense dashboard to track your spending.",
+      "NAM Rewards is an app that lets you earn cryptocurrency (NAM Coins) just by uploading photos of your everyday receipts. You spend money like normal — on groceries, coffee, gas, online shopping — then snap your receipt and earn crypto.",
   },
   {
     question: "What is NAM Coin?",
     answer:
-      "NAM stands for Non-Automated Mined. NAM Coin is a cryptocurrency token on the Base blockchain. It's mined by real people uploading real receipts — no bots, no automated farming. There are 14.4 million total tokens, split 50/50 between users and the treasury.",
+      "NAM stands for Non-Automated Mined. NAM Coin is a cryptocurrency token on the Base blockchain. It's mined by real people uploading real receipts — no bots, no automated farming. There are 14.4 million tokens created daily, split 50/50 between users and the treasury.",
   },
   {
     question: "How does mining work?",
@@ -57,7 +57,7 @@ const faqs = [
   {
     question: "Is my data safe?",
     answer:
-      "Yes. Receipt data is securely processed and your personal information is protected. The app is designed with privacy in mind — your spending data is yours.",
+      "Yes. Receipt data is securely processed.",
   },
 ];
 
