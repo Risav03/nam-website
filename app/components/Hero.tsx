@@ -269,8 +269,7 @@ export default function Hero() {
             Upload everyday receipts. Earn{" "}
             <span className="text-nam-green font-medium">NAM Coins</span>{" "}
             through on-chain mining. Get a powerful crypto wallet.
-            NAM Rewards combine crypto rewards with a true crypto wallet. Buy, sell, send, and earn
-            tokens — all from the convenience of one app.
+            
             <br className="hidden sm:block" />
             Zero risk. Zero investment. Real crypto.
           </p>
